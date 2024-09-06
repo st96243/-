@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+.container {
+    width: 100%;
+    height: 1080px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #535353;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    left: 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.questions {
+    text-align: left;
+}
+
+.questions button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+} 
+
+.questions button:hover {
+    background-color: #576069;
+}
+
+.input-container {
+    text-align: center;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 600px;
+}
+
+.input-container input {
+    width: calc(100% - 40px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+.input-container button {
+    padding: 10px 20px;
+    border: 2px solid #ffffff;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 25px;
+    flex: 1;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar button img {
+    width: 35px;
+    height: 35px;
+}
+
+/* 聊天容器樣式 */
+.chat-container {
+    background-color: #535353; /* 背景顏色 */
+    border-radius: 10px; /* 圓角 */
+    padding: 20px; /* 內間距 */
+    margin-top: 10px; /* 上外間距 */
+    max-height: 720px; /* 最大高度 */
+    overflow-y: auto; /*垂直滾動條 */
+    height: 850px;
+}
+
+/* 回應容器樣式 */
+.chat-response-container {
+    margin: 10px 0; /* 上下間距 */
+    padding: 10px; /* 內間距 */
+    border-radius: 10px; /* 圓角 */
+    background-color: #535353; /* 背景顏色 */
+    margin-top: 50px; /* 與上一行元素的間距 */
+}
+
+/* 聊天消息通用樣式 */
+.chat-message {
+    padding: 10px; /* 內間距 */
+    margin: 10px 0; /* 上下間距 */
+    border-radius: 10px; /* 圓角 */
+    display: inline-block; /* 使背景只圍繞文字 */
+    font-family: Arial, sans-serif; /* 設置字體為 Arial */
+    font-size: 18px;
+}
+
+/* 使用者消息樣式 */
+.chat-message.user {
+    background-color: #90EE90; /* 浅绿色背景 */
+    color: black;
+    margin-left: auto; /* 靠右对齐 */
+    text-align: right;
+    float: right;
+}
+
+/* 機器人消息樣式 */
+.chat-message.bot {
+    background-color: #FFFFFF; /* 白色背景 */
+    color: black;
+    margin-right: auto; /* 靠左对齐 */
+    text-align: left;
+    border: 1px solid #ccc; /* 添加轻微的边框 */
+}
+
+/* 回應按鈕樣式 */
+.response-button {
+    display: block; /* 塊級元素 */
+    width: 100%; /* 寬度 100% */
+    padding: 10px; /* 內間距 */
+    margin: 5px 0; /* 上下間距 */
+    background-color: #a8a8a8; /* 背景顏色 */
+    border: 1px solid #ccc; /* 邊框 */
+    border-radius: 25px; /* 圓角 */
+    cursor: pointer; /* 鼠標樣式 */
+    font-size: 18px; /* 字體大小 */
+    text-align: center; /* 文字居中對齊 */
+    color: #000; /* 字體顏色 */
+}
+
+/* 回應按鈕懸停樣式 */
+.response-button:hover {
+    background-color: #535353;
+}
+.chat-container img {
+    width: 150px; 
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 10px; 
+}
+.bot-message {
+    font-size: 18px;
+    text-align: left; /* 確保文字靠左對齊 */
+    margin: 0 0 10px 0;; /* 清除默認的外邊距 */
+    color: black;
+    background-color: #fff;
+    border-radius: 25px; /* 圓角 */
+    padding: 10px; /* 新增此行來增加文字與背景框的內邊距 */
+    margin-top: 50px; /* 與上一行元素的間距 */
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+.chat-message video {
+    width: 100%; /* 影片寬度設為100% */
+    border-radius: 10px; /* 圓角 */
+    height: 500px;
+}
