@@ -39,38 +39,6 @@
             }
         }
 
-        // 添加語音識別功能
-        function startRecognition() {
-            if (!('webkitSpeechRecognition' in window)) {
-                alert('此瀏覽器不支援語音識別功能，請使用 Google Chrome 或 Edge 瀏覽器進行測試。');
-                return;
-            }
-
-            const recognition = new webkitSpeechRecognition();
-            recognition.lang = 'zh-TW'; // 設定語言為繁體中文
-            recognition.interimResults = false; // 禁用中間結果
-            recognition.maxAlternatives = 1; // 返回一個最好的結果
-
-            recognition.onstart = function() {
-                document.getElementById('voiceButton').disabled = true; // 禁用按鈕
-            };
-
-            recognition.onresult = function(event) {
-                const transcript = event.results[0][0].transcript; // 獲取轉錄的文本
-                document.getElementById('userInput').value = transcript; // 將文本插入輸入框
-                // askQuestion(); // 自動提交問題
-            };
-
-            recognition.onerror = function(event) {
-                console.error('語音識別發生錯誤:', event.error);
-            };
-
-            recognition.onend = function() {
-                document.getElementById('voiceButton').disabled = false; // 啟用按鈕
-            };
-
-            recognition.start();
-        }
     </script>
 </body>
 </html>
