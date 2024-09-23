@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for gpt3-5-api on 2024-09-14T17:53:26+08:00
+# fly.toml app configuration file generated for gpt3-5-api on 2024-09-23T22:08:34+08:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -17,6 +17,6 @@ primary_region = 'nrt'
   processes = ['app']
 
 [[vm]]
-  memory = '512mb'
+  memory = '1gb'
   cpu_kind = 'shared'
-  cpus = 1
+  cpus = 2

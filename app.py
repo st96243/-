@@ -125,8 +125,9 @@ def handle_question(data):
     if user_style == "listener":
         system_prompt = (
             "你是一位真心關心朋友的人，當對方分享他們的不開心時，你會靜靜傾聽並表示理解，"
-            "不給出建議，只是像一個朋友一樣關心地傾聽對方。不要表明你是 AI，只需自然地與對方交流，"
+            "不給出建議，也不要深入詢問。只是像一個朋友一樣關心地傾聽對方肯定對方的話。不要表明你是 AI，只需自然地與對方交流，"
             "使用輕鬆的語氣，並專注於理解和支持。"
+            "盡量以重複對方語氣表達認同"
         )
     elif user_style == "support":
         system_prompt = (
@@ -142,7 +143,7 @@ def handle_question(data):
 
     # 呼叫 OpenAI API 生成回應
     response = openai.ChatCompletion.create(
-        model="gpt-4",  # 使用 GPT-4
+        model="gpt-4o",  # 使用 GPT-4
         messages=conversation_context,
         max_tokens=500,
         temperature=0.7,
